@@ -53,6 +53,13 @@ export class ResidentsComponent implements OnInit {
     }, 100);
   }
 
+    onSelect({ selected }) {
+      debugger;
+    this.residentsSelected.splice(0, this.residentsSelected.length);
+    this.residentsSelected.push(...selected);
+      }
+
+
   setDataInit() {
     this.ngxDatatableMessage = {
       emptyMessage: 'No hay información para mostrar.'
@@ -100,13 +107,29 @@ export class ResidentsComponent implements OnInit {
         this.residents = new Array<ResidentInformationModel>();
         return;
       }
-      debugger;
       this.isLoading=false;
       this.residents=response.data;
       console.log(this.residents);
       this._toastr.success("Succesful");
           
     })
+  }
+
+  deleteResident()
+  {
+    this.isLoading=true;  
+    debugger; 
+    const resident= this.residentsSelected[0];
+    this._residentService.deleteResident(resident.residentInformationId)
+        .subscribe((response: any) => {
+          this.isLoading=false;
+          if (response.Message && response.Message.length>0){
+            this._toastr.warning(response.Message, 'Error');
+            return;
+          }
+          this._toastr.success('Transaction was successful');
+          location.reload();
+          }); 
   }
 
 

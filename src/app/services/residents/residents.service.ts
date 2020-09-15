@@ -22,4 +22,11 @@ private url: String;
     const url = this.url+'api/resident/save-resident';
     return this.http.post(url, request);
   }
+
+  deleteResident(residentId : String){
+    const url = this.url+'api/resident/delete-resident?residentId='+residentId;
+    return this.http.delete(url);
+  }
+
+
 }

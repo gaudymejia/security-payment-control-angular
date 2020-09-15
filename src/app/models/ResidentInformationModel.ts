@@ -1,6 +1,6 @@
 export class ResidentInformationModel{
     
-    public  ResidentInformationId :String;
+    public  residentInformationId :String;
     public  Name :String;
     public  LastName :String;
     public  PhoneNumber :String;
