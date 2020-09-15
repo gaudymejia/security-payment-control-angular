@@ -7,52 +7,68 @@
             <div fxLayout="row wrap">
                 <div class="p-10" fxFlex.gt-sm="10" > 
                     <mat-form-field>
-                    <input  matInput ng-untouched placeholder="Name" name="productionLote">
-                    <mat-icon class="editIconColor" matSuffix>insert_invitation</mat-icon>
+                    <input  matInput ng-untouched placeholder="Name" name="resident.Name" [(ngModel)]="resident.Name">
+                    <mat-icon class="editIconColor" matSuffix>account_circle</mat-icon>
                     </mat-form-field>
                 </div>
 
                 <div class="p-10" fxFlex.gt-sm="10" > 
                     <mat-form-field>
-                    <input  matInput ng-untouched placeholder="Last Name" name="productionLote">
-                    <mat-icon class="editIconColor" matSuffix>insert_invitation</mat-icon>
+                    <input  matInput ng-untouched placeholder="Last Name" name="resident.LastName" [(ngModel)]="resident.LastName">
+                    <mat-icon class="editIconColor" matSuffix>account_circle</mat-icon>
                     </mat-form-field>
                 </div>
 
                 <div class="p-10" fxFlex.gt-sm="10" > 
                     <mat-form-field>
-                    <input  matInput ng-untouched placeholder="Phone" name="productionLote">
-                    <mat-icon class="editIconColor" matSuffix>insert_invitation</mat-icon>
+                    <input  matInput ng-untouched placeholder="Email" name="resident.Email" [(ngModel)]="resident.Email">
+                    <mat-icon class="editIconColor" matSuffix>mail_outline</mat-icon>
                     </mat-form-field>
                 </div>
 
                 <div class="p-10" fxFlex.gt-sm="10" > 
                     <mat-form-field>
-                    <input type="number"   matInput ng-untouched placeholder="Country Code" name="productionLote">
-                    <mat-icon class="editIconColor" matSuffix>insert_invitation</mat-icon>
+                    <input type="number"   matInput ng-untouched placeholder="Country Code" name="resident.CountryCode" [(ngModel)]="resident.CountryCode">
+                    <mat-icon class="editIconColor" matSuffix>location_on</mat-icon>
                     </mat-form-field>
                 </div>
 
                 <div class="p-10" fxFlex.gt-sm="10" > 
                     <mat-form-field>
-                    <input type="number"  matInput ng-untouched placeholder="Block Number" name="productionLote">
-                    <mat-icon class="editIconColor" matSuffix>insert_invitation</mat-icon>
+                    <input  matInput ng-untouched placeholder="Phone" name="resident.PhoneNumber" [(ngModel)]="resident.PhoneNumber">
+                    <mat-icon class="editIconColor" matSuffix>phone</mat-icon>
                     </mat-form-field>
                 </div>
 
                 <div class="p-10" fxFlex.gt-sm="10" > 
                     <mat-form-field>
-                    <input type="number"  matInput ng-untouched placeholder="House Number" name="productionLote">
-                    <mat-icon class="editIconColor" matSuffix>insert_invitation</mat-icon>
+                    <input type="number"  matInput ng-untouched placeholder="Block Number" name="resident.BlockNumber" [(ngModel)]="resident.BlockNumber">
+                    <mat-icon class="editIconColor" matSuffix>format_list_numbered_rtl</mat-icon>
+                    </mat-form-field>
+                </div>
+
+                <div class="p-10" fxFlex.gt-sm="10" > 
+                    <mat-form-field>
+                    <input type="number"  matInput ng-untouched placeholder="House Number" name="resident.HouseNumber" [(ngModel)]="resident.HouseNumber">
+                    <mat-icon class="editIconColor" matSuffix>home</mat-icon>
                     </mat-form-field>
                 </div>
             </div>
 
             <div fxLayout="row wrap">
                 
-                <button mat-button (click)="onNoClick()">No Thanks</button>
-                <button mat-button>Ok</button>
-                  
+                <!-- <button mat-button (click)="onNoClick()">Cancel</button>
+                <button mat-button>Save</button> -->
+
+                <button  mat-fab color="primary" (click)="onNoClick()">
+                    <mat-icon>cancel</mat-icon>
+                </button>
+
+                <button mat-fab color="accent" (click)="saveResident()">
+                    <mat-icon>save</mat-icon>
+                </button>
+
+                
             </div> 
     </mat-card-content>
 </mat-card>

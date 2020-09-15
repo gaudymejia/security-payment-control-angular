@@ -1,5 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { ResidentInformationModel } from 'src/app/models/ResidentInformationModel';
 import { environment } from 'src/environments/environment';
 
 @Injectable({
@@ -16,4 +17,9 @@ private url: String;
      const url = this.url+'api/resident/get-all-residents';
      return this.http.get(url);
    }
+
+   saveResident(request: ResidentInformationModel){
+    const url = this.url+'api/resident/save-resident';
+    return this.http.post(url, request);
+  }
 }

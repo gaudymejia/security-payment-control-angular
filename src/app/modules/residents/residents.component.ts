@@ -6,8 +6,14 @@ import {MatDialog, MatDialogRef, MAT_DIALOG_DATA} from '@angular/material/dialog
 import { CreateResidentsComponent } from './create-residents/create-residents.component';
 
 export interface DialogData {
-  name: String;
-  lastName: String;
+      ResidentInformationId :String;
+      Name :String;
+      LastName :String;
+      PhoneNumber :String;
+      CountryCode :String;
+      Email :String;
+      HouseNumber :Number;
+      BlockNumber :Number;
 }
 
 @Component({
@@ -24,6 +30,7 @@ export class ResidentsComponent implements OnInit {
   ngxDatatableMessage: any;
   timeout: any; 
   residents: ResidentInformationModel[];
+  residentsSelected : ResidentInformationModel[];
 
   constructor(
   public dialog: MatDialog,
@@ -56,6 +63,7 @@ export class ResidentsComponent implements OnInit {
 
   initializer() {
     this.residents = new Array<ResidentInformationModel>();
+    this.residentsSelected = new Array<ResidentInformationModel>();
     this.isLoading = false;
    
     }
