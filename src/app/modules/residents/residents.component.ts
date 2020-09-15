@@ -99,7 +99,6 @@ export class ResidentsComponent implements OnInit {
       }
       this.isLoading=false;
       this.residents=response.data;
-      console.log(this.residents);
       this._toastr.success("Succesful");
           
     })

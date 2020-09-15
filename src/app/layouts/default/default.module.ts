@@ -5,7 +5,6 @@ import { DashboardComponent } from 'src/app/modules/dashboard/dashboard.componen
 import { RouterModule } from '@angular/router';
 import { SharedModule } from 'src/app/shared/shared.module';
 import { ResidentsComponent } from 'src/app/modules/residents/residents.component';
-import { DashboardService } from 'src/app/services/dashboard/dashboard.service';
 import { MatSidenavModule, MatDividerModule, MatCardModule, MatPaginatorModule, MatTableModule } from '@angular/material';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { MaterialModule } from 'src/app/material-module';
@@ -32,9 +31,6 @@ import { VoucherComponent } from 'src/app/modules/voucher/voucher.component';
     MatTableModule,
     MaterialModule,
     NgxDatatableModule
-  ],
-  providers: [
-    DashboardService
   ]
 })
 export class DefaultModule { }

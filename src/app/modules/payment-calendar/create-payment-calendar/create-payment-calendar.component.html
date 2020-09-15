@@ -1,1 +1,38 @@
-<p>create-payment-calendar works!</p>
+<mat-card>
+    <mat-card-header>
+        <mat-card-title> Add | Configuration </mat-card-title>
+    </mat-card-header>
+
+    <mat-card-content class="mat-card-content">
+        <div fxLayout="row wrap">
+            <div class="p-10" fxFlex.gt-sm="10" > 
+                <mat-form-field appearance="fill">
+                    <mat-label>Choose a date</mat-label>
+                    <input matInput [matDatepicker]="picker" [(ngModel)]="paymentCalendar.paymentDate">
+                    <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+                    <mat-datepicker #picker></mat-datepicker>
+                  </mat-form-field>
+            </div>
+
+           
+            <div style="width: 10px;" class="p-10" fxFlex.gt-sm="15" > 
+                <mat-form-field>
+                <input type="number"  matInput ng-untouched placeholder="Ammount" name="configuration.Ammount" [(ngModel)]="paymentCalendar.paymentCalendarAmmount" >
+                <mat-icon class="editIconColor" matSuffix>attach_money</mat-icon>
+                </mat-form-field>
+            </div>
+        </div>
+
+        <div fxLayout="row wrap">
+
+            <button  mat-fab color="primary" (click)="onNoClick()">
+                <mat-icon>cancel</mat-icon>
+            </button>
+
+            <button mat-fab color="accent" (click)="savePaymentCalendar()">
+                <mat-icon>save</mat-icon>
+            </button>
+            
+        </div> 
+    </mat-card-content>
+</mat-card>

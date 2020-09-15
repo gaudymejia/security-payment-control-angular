@@ -1,5 +1,5 @@
 export class PaymentCalendarModel{
     
-    public  paymentDate :Date;
-    public  ammount :Number;
+    public  paymentDate :any;
+    public  paymentCalendarAmmount :Number;
 }

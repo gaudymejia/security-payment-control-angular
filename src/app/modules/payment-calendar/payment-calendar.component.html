@@ -6,14 +6,38 @@
     <mat-progress-bar mode="indeterminate" *ngIf="isLoading"></mat-progress-bar>
 
     <mat-card-content class="mat-card-content" style="padding-top: 3%">
+        <ngx-datatable #myTable class='material expandable' [columnMode]="'force'" [headerHeight]="50" [footerHeight]="50"
+        [rowHeight]="50"  [scrollbarV]="false" [rows]='paymentConfigurations'  [limit]="10" (page)="onPage($event)"
+        [messages]="ngxDatatableMessage"
+        [selectAllRowsOnPage]="false">
+     
+
+        <ngx-datatable-column name="<i class='fa fa-cogs fa-fw'></i> Payment Date" prop="paymentDate"
+            [canAutoResize]="false" [width]="200">
+
+            <ng-template let-value="value" ngx-datatable-cell-template>
+                {{ value | date:'MMM dd, yyyy' }}
+              </ng-template>
+
+        </ngx-datatable-column>
+    
+        <ngx-datatable-column name="<i class='fa fa-cogs fa-fw'></i> Payment Ammount" prop="paymentCalendarAmmount"
+                [canAutoResize]="false" [width]="200"></ngx-datatable-column>  
+
+
+        </ngx-datatable> 
+
+
         <div fxLayout="row wrap">
             <div class="p-20">
               <mat-card-actions>
-                <button mat-raised-button color="accent" >
-                    <i class="fa fa-plus-square fa-fw"></i> Add Payment
+                <button mat-raised-button color="accent" (click)="openDialog()">
+                    <i class="fa fa-plus-square fa-fw"></i> Add Payment Configuration
                 </button>
             </mat-card-actions>
             </div>
         </div> 
     </mat-card-content>
+
+
 </mat-card>
