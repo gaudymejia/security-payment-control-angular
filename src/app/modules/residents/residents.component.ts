@@ -22,12 +22,10 @@ export interface DialogData {
   styleUrls: ['./residents.component.scss']
 })
 export class ResidentsComponent implements OnInit {
-  name: String;
-  lastName: String;
   @ViewChild('myTable', { static: true }) table: any;
 
   isLoading: boolean; 
-  ngxDatatableMessage: any;
+  ngxDatatableMessage: any; 
   timeout: any; 
   residents: ResidentInformationModel[];
   residentsSelected : ResidentInformationModel[];
@@ -78,12 +76,12 @@ export class ResidentsComponent implements OnInit {
     openDialog(): void {
       const dialogRef = this.dialog.open(CreateResidentsComponent, {
         width: '300px',
-        data: {name: this.name, lastName: this.lastName}
+        data: {}
       });
   
       dialogRef.afterClosed().subscribe(result => {
         console.log('The dialog was closed');
-        this.lastName = result;
+        // this.lastName = result;
       });
     }
   

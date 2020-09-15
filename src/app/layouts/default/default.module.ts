@@ -10,11 +10,15 @@ import { MatSidenavModule, MatDividerModule, MatCardModule, MatPaginatorModule, 
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { MaterialModule } from 'src/app/material-module';
 import { NgxDatatableModule } from '@swimlane/ngx-datatable';
+import { PaymentCalendarComponent } from 'src/app/modules/payment-calendar/payment-calendar.component';
+import { VoucherComponent } from 'src/app/modules/voucher/voucher.component';
 @NgModule({
   declarations: [
     DefaultComponent,
     DashboardComponent,
-    ResidentsComponent
+    ResidentsComponent,
+    PaymentCalendarComponent,
+    VoucherComponent
   ],
   imports: [
     CommonModule,

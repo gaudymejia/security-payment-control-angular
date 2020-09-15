@@ -9,11 +9,13 @@ import { HttpClientModule } from '@angular/common/http';
 import { ToastrModule } from 'ngx-toastr';
 import { CreateResidentsComponent } from './modules/residents/create-residents/create-residents.component';
 import { MaterialModule } from './material-module';
+import { CreatePaymentCalendarComponent } from './modules/payment-calendar/create-payment-calendar/create-payment-calendar.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     CreateResidentsComponent,
+    CreatePaymentCalendarComponent
   ],
   imports: [
     BrowserModule,

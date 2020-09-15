@@ -1,0 +1,19 @@
+<mat-card>
+    <mat-card-header>
+        <mat-card-title>Master | Payment Calendar</mat-card-title>
+    </mat-card-header>
+
+    <mat-progress-bar mode="indeterminate" *ngIf="isLoading"></mat-progress-bar>
+
+    <mat-card-content class="mat-card-content" style="padding-top: 3%">
+        <div fxLayout="row wrap">
+            <div class="p-20">
+              <mat-card-actions>
+                <button mat-raised-button color="accent" >
+                    <i class="fa fa-plus-square fa-fw"></i> Add Payment
+                </button>
+            </mat-card-actions>
+            </div>
+        </div> 
+    </mat-card-content>
+</mat-card>
