@@ -1,0 +1,67 @@
+<mat-card>
+    <mat-card-header>
+        <mat-card-title>Master | Residents Information</mat-card-title>
+    </mat-card-header>
+    
+    <mat-progress-bar mode="indeterminate" *ngIf="isLoading"></mat-progress-bar>
+                
+ 
+    <mat-card-content class="mat-card-content" style="padding-top: 3%">
+        
+        <ngx-datatable #myTable class='material expandable' [columnMode]="'force'" [headerHeight]="50" [footerHeight]="50"
+        [rowHeight]="50"  [scrollbarV]="false" [rows]='residents'  [limit]="10" (page)="onPage($event)"
+        [messages]="ngxDatatableMessage"
+        [selectionType]="'checkbox'"
+        [selected]="residents"
+        [selectAllRowsOnPage]="false">
+     
+ 
+       <ngx-datatable-column [width]="50" [sortable]="false" [canAutoResize]="false" [draggable]="false"
+                      [resizeable]="false" [checkboxable]="true">
+        </ngx-datatable-column>
+
+        <ngx-datatable-column name="<i class='fa fa-cogs fa-fw'></i> Resident Id" prop="residentInformationId"
+            [canAutoResize]="false" [width]="200"></ngx-datatable-column>
+    
+        <ngx-datatable-column name="<i class='fa fa-cogs fa-fw'></i> Name" prop="name"
+                [canAutoResize]="false" [width]="200"></ngx-datatable-column>  
+
+        <ngx-datatable-column name="<i class='fa fa-cogs fa-fw'></i> Last Name" prop="lastName"
+                    [canAutoResize]="false" [width]="200"></ngx-datatable-column>
+
+         <ngx-datatable-column name="<i class='fa fa-cogs fa-fw'></i> Phone Contact" prop="phoneContact"
+                    [canAutoResize]="false" [width]="200"></ngx-datatable-column> 
+
+         <ngx-datatable-column name="<i class='fa fa-cogs fa-fw'></i> Email" prop="emailContact"
+                    [canAutoResize]="false" [width]="200"></ngx-datatable-column>  
+
+         <ngx-datatable-column name="<i class='fa fa-cogs fa-fw'></i> Block Number" prop="blockNumber"
+                    [canAutoResize]="false" [width]="200"></ngx-datatable-column>  
+
+        <ngx-datatable-column name="<i class='fa fa-cogs fa-fw'></i> House Number" prop="houseNumber"
+                    [canAutoResize]="false" [width]="200"></ngx-datatable-column>
+
+
+
+
+        </ngx-datatable>
+
+        <div fxLayout="row wrap">
+            <div class="p-20">
+              <mat-card-actions>
+                <button mat-raised-button color="accent" (click)="openDialog()">
+                    <i class="fa fa-plus-square fa-fw"></i> Add Resident
+                </button>
+            </mat-card-actions>
+            </div>
+
+            <div class="p-20">
+                <mat-card-actions>
+                  <button mat-raised-button color="primary" (click)="execToast()">
+                      <i class="fa fa-plus-square fa-fw"></i> Remove Resident
+                  </button>
+              </mat-card-actions>
+              </div>
+        </div> 
+    </mat-card-content>
+</mat-card>

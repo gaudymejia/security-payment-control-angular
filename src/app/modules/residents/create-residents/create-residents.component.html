@@ -1,0 +1,58 @@
+<mat-card>
+    <mat-card-header>
+        <mat-card-title> Add | New Resident </mat-card-title>
+    </mat-card-header>
+
+    <mat-card-content class="mat-card-content">
+            <div fxLayout="row wrap">
+                <div class="p-10" fxFlex.gt-sm="10" > 
+                    <mat-form-field>
+                    <input  matInput ng-untouched placeholder="Name" name="productionLote">
+                    <mat-icon class="editIconColor" matSuffix>insert_invitation</mat-icon>
+                    </mat-form-field>
+                </div>
+
+                <div class="p-10" fxFlex.gt-sm="10" > 
+                    <mat-form-field>
+                    <input  matInput ng-untouched placeholder="Last Name" name="productionLote">
+                    <mat-icon class="editIconColor" matSuffix>insert_invitation</mat-icon>
+                    </mat-form-field>
+                </div>
+
+                <div class="p-10" fxFlex.gt-sm="10" > 
+                    <mat-form-field>
+                    <input  matInput ng-untouched placeholder="Phone" name="productionLote">
+                    <mat-icon class="editIconColor" matSuffix>insert_invitation</mat-icon>
+                    </mat-form-field>
+                </div>
+
+                <div class="p-10" fxFlex.gt-sm="10" > 
+                    <mat-form-field>
+                    <input type="number"   matInput ng-untouched placeholder="Country Code" name="productionLote">
+                    <mat-icon class="editIconColor" matSuffix>insert_invitation</mat-icon>
+                    </mat-form-field>
+                </div>
+
+                <div class="p-10" fxFlex.gt-sm="10" > 
+                    <mat-form-field>
+                    <input type="number"  matInput ng-untouched placeholder="Block Number" name="productionLote">
+                    <mat-icon class="editIconColor" matSuffix>insert_invitation</mat-icon>
+                    </mat-form-field>
+                </div>
+
+                <div class="p-10" fxFlex.gt-sm="10" > 
+                    <mat-form-field>
+                    <input type="number"  matInput ng-untouched placeholder="House Number" name="productionLote">
+                    <mat-icon class="editIconColor" matSuffix>insert_invitation</mat-icon>
+                    </mat-form-field>
+                </div>
+            </div>
+
+            <div fxLayout="row wrap">
+                
+                <button mat-button (click)="onNoClick()">No Thanks</button>
+                <button mat-button>Ok</button>
+                  
+            </div> 
+    </mat-card-content>
+</mat-card>
