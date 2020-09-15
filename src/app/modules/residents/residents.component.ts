@@ -13,7 +13,7 @@ export interface DialogData {
       CountryCode :String;
       Email :String;
       HouseNumber :Number;
-      BlockNumber :Number;
+      BlockNumber :Number; 
 }
 
 @Component({
@@ -85,14 +85,6 @@ export class ResidentsComponent implements OnInit {
       });
     }
   
-  
-
-  execToast()
-  {
-
-      this._toastr.success("Hola");
-  
-  }
 
   getResidents() {
     this.isLoading=true;

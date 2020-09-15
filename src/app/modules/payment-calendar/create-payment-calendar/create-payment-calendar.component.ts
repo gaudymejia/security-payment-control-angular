@@ -7,7 +7,7 @@ import { ToastrService } from 'ngx-toastr';
 @Component({
   selector: 'app-create-payment-calendar',
   templateUrl: './create-payment-calendar.component.html',
-  styleUrls: ['./create-payment-calendar.component.css']
+  styleUrls: ['./create-payment-calendar.component.scss']
 })
 export class CreatePaymentCalendarComponent implements OnInit {
 paymentCalendar : PaymentCalendarModel;
