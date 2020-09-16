@@ -1,5 +1,27 @@
-<mat-card>
-    <mat-card-header>
-        <mat-card-title>Dashboard</mat-card-title>
-    </mat-card-header>
-</mat-card>
+<link href="https://fonts.googleapis.com/css?family=Nunito:200,300,400,600,700,900" rel="stylesheet">
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-4" >
+
+      <div class="card card-1">
+        <h3>Residents</h3>
+        <a mat-list-item routerLinkActive="list-item-active" routerLink="/residents">Residents</a>
+      </div>
+
+    </div>
+    
+    <div class="col-md-4">
+      <div class="card card-2">
+        <h3>Voucher</h3>
+        <a mat-list-item routerLinkActive="list-item-active" routerLink="/voucher">Voucher Control</a>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="card card-3">
+        <h3>Calendar Payment</h3>
+        <a mat-list-item routerLinkActive="list-item-active" routerLink="/payment-calendar">Payment Calendar</a>
+      </div>
+    </div>
+  </div>
+</div>
