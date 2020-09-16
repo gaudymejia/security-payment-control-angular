@@ -1,0 +1,55 @@
+<mat-card>
+    <mat-card-header>
+        <mat-card-title> Add | Voucher </mat-card-title>
+    </mat-card-header>
+
+    <mat-card-content class="mat-card-content">
+        <div fxLayout="row wrap">
+            <div class="p-10" fxFlex.gt-sm="10" > 
+                <mat-form-field appearance="fill">
+                    <mat-label>Payment Date</mat-label>
+                    <input matInput [matDatepicker]="picker" [(ngModel)]="voucher.paymentDate">
+                    <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+                    <mat-datepicker #picker></mat-datepicker>
+                  </mat-form-field>
+            </div>
+
+            <div class="p-10" fxFlex.gt-sm="10" > 
+                <mat-form-field appearance="fill">
+                    <mat-label>Payment Calendar Date</mat-label>
+                    <input matInput [matDatepicker]="picker1"  [(ngModel)]="voucher.paymentCalendarDate">
+                    <mat-datepicker-toggle matSuffix [for]="picker1"></mat-datepicker-toggle>
+                    <mat-datepicker #picker1></mat-datepicker>
+                  </mat-form-field>
+            </div>
+
+            <div class="p-10" fxFlex.gt-sm="10" > 
+                <mat-form-field>
+                <input type="number"  matInput ng-untouched placeholder="Email" name="resident.Email" [(ngModel)]="voucher.paymentAmmount">
+                <mat-icon class="editIconColor" matSuffix>mail_outline</mat-icon>
+                </mat-form-field>
+            </div>
+
+            <div class="p-10" fxFlex.gt-sm="10" > 
+                <mat-form-field>
+                <input type="number"   matInput ng-untouched placeholder="Country Code" name="resident.CountryCode" [(ngModel)]="voucher.pendingAmmount">
+                <mat-icon class="editIconColor" matSuffix>location_on</mat-icon>
+                </mat-form-field>
+            </div>
+
+
+        </div> 
+
+        <div fxLayout="row wrap">
+
+            <button  mat-fab color="primary" (click)="onNoClick()">
+                <mat-icon>cancel</mat-icon>
+            </button>
+
+            <button mat-fab color="accent" (click)="saveVoucher()">
+                <mat-icon>save</mat-icon>
+            </button>
+            
+        </div>
+    </mat-card-content>
+</mat-card>

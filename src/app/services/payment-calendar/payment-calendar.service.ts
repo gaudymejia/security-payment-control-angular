@@ -20,7 +20,7 @@ export class PaymentCalendarService {
    }
 
    savePaymentCalendarConfiguration(request: PaymentCalendarModel){
-    debugger;
+
     request.paymentDate=moment(request.paymentDate).format('YYYY-MM-DD');
     const url = this.url+'api/payment-calendar/save-payment-calendar-configuration';
     return this.http.post(url, request);

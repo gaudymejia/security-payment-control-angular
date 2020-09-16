@@ -52,7 +52,6 @@ export class ResidentsComponent implements OnInit {
   }
 
     onSelect({ selected }) {
-      debugger;
     this.residentsSelected.splice(0, this.residentsSelected.length);
     this.residentsSelected.push(...selected);
       }
@@ -107,7 +106,6 @@ export class ResidentsComponent implements OnInit {
   deleteResident()
   {
     this.isLoading=true;  
-    debugger; 
     const resident= this.residentsSelected[0];
     this._residentService.deleteResident(resident.residentInformationId)
         .subscribe((response: any) => {

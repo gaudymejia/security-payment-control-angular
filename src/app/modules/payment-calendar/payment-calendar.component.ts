@@ -69,7 +69,7 @@ export class PaymentCalendarComponent implements OnInit {
       }
 
       getPaymentConfigurations() {
-        debugger;
+
         this.isLoading=true;
         this._paymentCalendarService.getPaymentConfigurations()
         .subscribe((response:any)=>{

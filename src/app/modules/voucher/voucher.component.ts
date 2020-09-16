@@ -5,6 +5,12 @@ import { ResidentInformationModel } from 'src/app/models/ResidentInformationMode
 import { VoucherModel } from 'src/app/models/VoucherModel';
 import { ResidentsService } from 'src/app/services/residents/residents.service';
 import { VoucherService } from 'src/app/services/voucher/voucher.service';
+import { CreateVoucherComponent } from './create-voucher/create-voucher.component';
+
+export interface DialogData {
+  residentId :String;
+  selectedResident :any;
+}
 
 @Component({
   selector: 'app-voucher',
@@ -39,6 +45,17 @@ export class VoucherComponent implements OnInit {
     clearTimeout(this.timeout);
     this.timeout = setTimeout(() => {
     }, 100);
+  }
+
+  openDialog(): void {
+    const dialogRef = this.dialog.open(CreateVoucherComponent, {
+      width: '325px',
+      data: {selectedResident:this.selectedResident}
+    });
+
+    dialogRef.afterClosed().subscribe(result => {
+      console.log('The dialog was closed');
+    });
   }
 
   setDataInit() {

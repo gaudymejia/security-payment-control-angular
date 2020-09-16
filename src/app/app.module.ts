@@ -10,12 +10,14 @@ import { ToastrModule } from 'ngx-toastr';
 import { CreateResidentsComponent } from './modules/residents/create-residents/create-residents.component';
 import { MaterialModule } from './material-module';
 import { CreatePaymentCalendarComponent } from './modules/payment-calendar/create-payment-calendar/create-payment-calendar.component';
+import { CreateVoucherComponent } from './modules/voucher/create-voucher/create-voucher.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     CreateResidentsComponent,
-    CreatePaymentCalendarComponent
+    CreatePaymentCalendarComponent,
+    CreateVoucherComponent
   ],
   imports: [
     BrowserModule,

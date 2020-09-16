@@ -47,5 +47,16 @@
             <ngx-datatable-column name="<i class='fa fa-cogs fa-fw'></i> Pending Ammount" prop="pendingAmmount"
                 [canAutoResize]="false" [width]="200"></ngx-datatable-column> 
           </ngx-datatable>
+
+          <div fxLayout="row wrap">
+            <div class="p-20">
+              <mat-card-actions>
+                <button *ngIf="selectedResident" mat-raised-button color="accent" (click)="openDialog()" >
+                    <i class="fa fa-plus-square fa-fw"></i> Add Voucher
+                </button>
+            </mat-card-actions>
+            </div>
+
+        </div>
     </mat-card-content>
 </mat-card>

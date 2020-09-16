@@ -32,7 +32,6 @@ constructor( public dialogRef: MatDialogRef<CreatePaymentCalendarComponent>,
   savePaymentCalendar()
   {
     this.isLoading=true;   
-    debugger;
     this._paymentCalendarService.savePaymentCalendarConfiguration(this.paymentCalendar)
         .subscribe((response: any) => {
           this.isLoading=false;
